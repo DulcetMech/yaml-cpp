@@ -3,6 +3,7 @@ project "yaml-cpp"
 	language "C++"
     staticruntime "on"
 	
+	
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
@@ -13,12 +14,12 @@ project "yaml-cpp"
 		
 		"include/**.h"
 	}
-
+	
 	includedirs
 	{
 		"include"
 	}
-
+	
 	defines
 	{
 		"YAML_CPP_STATIC_DEFINE"
@@ -44,4 +45,4 @@ project "yaml-cpp"
     filter "configurations:Dist"
 		runtime "Release"
 		optimize "on"
-        symbols "off"
+		symbols "off"
